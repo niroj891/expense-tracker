@@ -19,6 +19,14 @@ namespace ExpenseTrackerApp.Services
 
             EnsureExpensesFileExists();
         }
+        public static string GetAppDirectoryPath()
+    {
+        return Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            "Islington-Todo"
+        );
+    }
+
 
         // Ensure the file exists with an empty array if not present
         private void EnsureExpensesFileExists()
