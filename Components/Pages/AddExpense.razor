@@ -1,0 +1,53 @@
+@page "/add-expense"
+@using DotnetCoursework.Model
+@using ExpenseTrackerApp.Services
+@inject ExpenseService ExpenseService
+@inject ISnackbar Snackbar
+@inject NavigationManager NavigationManager
+
+<div style="display: flex; flex-direction: column; padding: 20px;">
+    <nav>
+        <!-- Add your NavMenu content here if needed -->
+    </nav>
+
+    <div style="padding: 20px; display: flex; flex-direction: column; align-items: center;">
+        <div style="max-width: 900px; width: 100%;">
+            <!-- Page Title and Navigation Button -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h5 style="color: #007bff; font-size: 1.25rem;">Add Expense</h5>
+                <button style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;" @onclick="NavigateToHome">
+                    Back to Home
+                </button>
+            </div>
+
+            <!-- Expense Form Removed -->
+            <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <div style="margin-bottom: 15px;">
+                    <label for="description" style="display: block; margin-bottom: 5px; font-weight: bold;">Description</label>
+                    <input type="text" id="description" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;" />
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="date" style="display: block; margin-bottom: 5px; font-weight: bold;">Date</label>
+                    <input type="date" id="date" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;" />
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label for="amount" style="display: block; margin-bottom: 5px; font-weight: bold;">Amount</label>
+                    <input type="number" id="amount" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;" />
+                </div>
+
+                <button style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; width: 100%; margin-top: 20px;">
+                    Add Expense
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private void NavigateToHome()
+    {
+        NavigationManager.NavigateTo("/home");
+    }
+}

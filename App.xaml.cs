@@ -6,7 +6,8 @@
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            // Set the MainPage to use BlazorWebView for Blazor components
+            MainPage = new MainPage(); // This should be a page that hosts the BlazorWebView
         }
     }
 }

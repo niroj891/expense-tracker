@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using ExpenseTrackerApp.Services; // Make sure to include the correct namespace for your services
+using Microsoft.Extensions.Logging;
+using MudBlazor.Services;
 
 namespace DotnetCourseowork
 {
@@ -15,10 +17,21 @@ namespace DotnetCourseowork
                 });
 
             builder.Services.AddMauiBlazorWebView();
+            
+
+            // Add MudBlazor services
+            builder.Services.AddMudServices();
+            ExpenseService expenseService = new ExpenseService();
+           
+            Console.WriteLine("all expenses:"+expenseService.GetAllExpenses());
+                
+
+            // Register ExpenseService as a Singleton or Transient
+            builder.Services.AddSingleton<ExpenseService>(); // or AddScoped, depending on your desired lifecycle
 
 #if DEBUG
-    		builder.Services.AddBlazorWebViewDeveloperTools();
-    		builder.Logging.AddDebug();
+            builder.Services.AddBlazorWebViewDeveloperTools();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

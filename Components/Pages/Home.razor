@@ -1,5 +1,62 @@
 ﻿@page "/home"
+@using MudBlazor
 
-<h1>Hello, world!</h1>
+<MudLayout>
+    <!-- Include the Navigation Menu (NavMenu) -->
+    <NavMenu />
 
-Welcome to your new app.
+    <!-- Main Content -->
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Medium" Style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+            <MudPaper Elevation="3" Class="d-flex flex-column align-items-center" Style="padding: 40px; border-radius: 12px; background-color: #fff; width: 100%; max-width: 900px;">
+                <MudText Typo="Typo.h4" Color="Color.Primary" Align="Align.Center" Style="margin-bottom: 20px;">
+                    Welcome to Expense Tracker App
+                </MudText>
+                <MudText Typo="Typo.body1" Align="Align.Center" Style="color: #555; margin-bottom: 30px;">
+                    Effortlessly track your expenses and manage your finances with ease!
+                </MudText>
+
+                <MudText Typo="Typo.body2" Align="Align.Center" Style="color: #777; margin-bottom: 30px;">
+                    Use the navigation menu on the left to access different features of the app.
+                </MudText>
+
+                <!-- Static Line Chart -->
+                <MudText Typo="Typo.h6" Align="Align.Center" Style="margin-bottom: 20px; color: #333;">
+                    Monthly Expenses
+                </MudText>
+                <MudChart ChartType="ChartType.Line" Height="300px" Style="margin-bottom: 40px;">
+                    <ChartData>
+                        <ChartDataPoint X="January" Y="500" />
+                        <ChartDataPoint X="February" Y="600" />
+                        <ChartDataPoint X="March" Y="700" />
+                        <ChartDataPoint X="April" Y="800" />
+                        <ChartDataPoint X="May" Y="750" />
+                        <ChartDataPoint X="June" Y="650" />
+                    </ChartData>
+                    <ChartOptions>
+                        <ChartOption Name="scales" Type="scale" Value="{
+                            'x': {'title': {'display': true, 'text': 'Months'}},
+                            'y': {'title': {'display': true, 'text': 'Amount (in $)'}}
+                        }" />
+                    </ChartOptions>
+                </MudChart>
+
+                <!-- Static Pie Chart -->
+                <MudText Typo="Typo.h6" Align="Align.Center" Style="margin-bottom: 20px; color: #333;">
+                    Expense Categories
+                </MudText>
+                <MudChart ChartType="ChartType.Pie" Height="300px">
+                    <ChartData>
+                        <ChartDataPoint Label="Food" Value="40" />
+                        <ChartDataPoint Label="Transport" Value="30" />
+                        <ChartDataPoint Label="Shopping" Value="20" />
+                        <ChartDataPoint Label="Utilities" Value="10" />
+                    </ChartData>
+                    <ChartOptions>
+                        <ChartOption Name="plugins.legend.position" Value="'top'" />
+                    </ChartOptions>
+                </MudChart>
+            </MudPaper>
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>

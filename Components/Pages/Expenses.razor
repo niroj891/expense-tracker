@@ -1,0 +1,91 @@
+@page "/view-expenses"
+@using DotnetCoursework.Model
+@using ExpenseTrackerApp.Services
+@inject ExpenseService ExpenseService
+@inject NavigationManager NavigationManager
+
+<div style="display: flex; flex-direction: column; padding: 20px;">
+    <!-- Page Title and Navigation Button -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h5 style="color: #007bff; font-size: 1.25rem;">Expenses</h5>
+        <button style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;" @onclick="NavigateToHome">
+            Back to Home
+        </button>
+    </div>
+
+    <div style="padding: 20px; background-color: #fff; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px;">
+        <!-- Table Header -->
+        <div style="margin-bottom: 20px;">
+            <h6 style="font-size: 1rem; color: #333;">Expenses List</h6>
+        </div>
+
+        <!-- Table Content -->
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">Id</th>
+                    <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">Date</th>
+                    <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">Description</th>
+                    <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">Amount</th>
+                    <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (expenses.Count > 0)
+                {
+                    @foreach (var expense in expenses)
+                    {
+                        <tr>
+                            <td style="padding: 8px; border: 1px solid #ddd;">@expense.Id</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">@expense.Description</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">$@expense.Amount</td>
+                            <td style="padding: 8px; border: 1px solid #ddd;">
+                                <button style="background-color: #e74c3c; color: white; padding: 5px 10px; cursor: pointer; border: none; border-radius: 5px;" @onclick="() => DeleteExpense(expense.Id)">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="5" style="text-align: center; padding: 8px; border: 1px solid #ddd; color: #333;">
+                            No expenses available.
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    private List<Expense> expenses = new List<Expense>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Fetch expenses from the ExpenseService
+        expenses = ExpenseService.GetAllExpenses();
+    }
+
+    private async Task DeleteExpense(int expenseId)
+    {
+        try
+        {
+            // Delete expense via ExpenseService
+            ExpenseService.DeleteExpense(expenseId);
+            expenses = ExpenseService.GetAllExpenses();  // Re-fetch the updated list of expenses
+        }
+        catch (Exception ex)
+        {
+            // Handle the error (for now, we just print the error in the console)
+            Console.WriteLine($"Error deleting expense: {ex.Message}");
+        }
+    }
+
+    private async Task NavigateToHome()
+    {
+        NavigationManager.NavigateTo("/home");
+    }
+}
