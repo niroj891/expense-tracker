@@ -18,7 +18,6 @@ namespace ExpenseTrackerApp.Services
             _expensesFilePath = Path.Combine(userHomeDirectory, "Desktop", "expenses.json");
 
             EnsureExpensesFileExists();
-            EnsureExpensesFileExists();
         }
 
         // Ensure the file exists with an empty array if not present

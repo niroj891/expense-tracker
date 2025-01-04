@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - /Users/raghabpokhrel/RiderProjects/mauiblazor-expense-tracker/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/DotnetCourseowork.app/Contents/MonoBundle/libe_sqlite3.dylib

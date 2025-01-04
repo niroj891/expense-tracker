@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/raghabpokhrel/RiderProjects/mauiblazor-expense-tracker/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/scopedcss/bundle/DotnetCourseowork.styles.css",
+      "PackagePath": "staticwebassets/DotnetCourseowork.styles.css"
+    },
+    {
+      "Id": "/Users/raghabpokhrel/RiderProjects/mauiblazor-expense-tracker/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
+    },
+    {
+      "Id": "/Users/raghabpokhrel/RiderProjects/mauiblazor-expense-tracker/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/raghabpokhrel/RiderProjects/mauiblazor-expense-tracker/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "/Users/raghabpokhrel/RiderProjects/mauiblazor-expense-tracker/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/staticwebassets/msbuild.DotnetCourseowork.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/staticwebassets/msbuild.build.DotnetCourseowork.props",
+      "PackagePath": "build\\DotnetCourseowork.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/staticwebassets/msbuild.buildMultiTargeting.DotnetCourseowork.props",
+      "PackagePath": "buildMultiTargeting\\DotnetCourseowork.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/staticwebassets/msbuild.buildTransitive.DotnetCourseowork.props",
+      "PackagePath": "buildTransitive\\DotnetCourseowork.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

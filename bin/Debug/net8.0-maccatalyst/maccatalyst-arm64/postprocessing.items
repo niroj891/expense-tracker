@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="DotnetCourseowork.app/Contents/MacOS/DotnetCourseowork">
+      <IsAppExtension>false</IsAppExtension>
+      <BCSymbolMapName>DotnetCourseowork.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>DotnetCourseowork.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/raghabpokhrel/RiderProjects/mauiblazor-expense-tracker/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/mtouch-symbols.list</SymbolFile>
+      <DSymName>DotnetCourseowork.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/raghabpokhrel/RiderProjects/mauiblazor-expense-tracker</SourceProjectPath>
+      <IsXPCService></IsXPCService>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

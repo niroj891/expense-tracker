@@ -1,59 +1,59 @@
-# .NET MAUI / Blazor
-bin/
-obj/
-Generated/
+## .NET MAUI / Blazor
+#bin/
+#obj/
+#Generated/
 
 # VS Code settings folder
 .vscode/
 .vs/
 
-# Rider settings folder
-.idea/
-
-# macOS system files
-.DS_Store
-
-# Windows system files
-Thumbs.db
-
-# Build directories
-bin/
-obj/
-out/
-
-# Logs
-*.log
-
-# Dependency directories
-node_modules/
-bower_components/
-jspm_packages/
-
-# NPM/Yarn lock files
-package-lock.json
-yarn.lock
-
-# User-specific files
-*.user
-*.userosscache
-*.suo
-*.userprefs
-
-# Temporary files
-*.tmp
-*.temp
-
-# Visual Studio for Mac specific files
-.vs/
-
-# VS Code workspace settings
-*.code-workspace
-
-# Coverage reports
-coverage/
-*.lcov
-
-# TypeScript compiled files
-*.js
-*.d.ts
-*.map
+## Rider settings folder
+#.idea/
+#
+## macOS system files
+#.DS_Store
+#
+## Windows system files
+#Thumbs.db
+#
+## Build directories
+#bin/
+#obj/
+#out/
+#
+## Logs
+#*.log
+#
+## Dependency directories
+#node_modules/
+#bower_components/
+#jspm_packages/
+#
+## NPM/Yarn lock files
+#package-lock.json
+#yarn.lock
+#
+## User-specific files
+#*.user
+#*.userosscache
+#*.suo
+#*.userprefs
+#
+## Temporary files
+#*.tmp
+#*.temp
+#
+## Visual Studio for Mac specific files
+#.vs/
+#
+## VS Code workspace settings
+#*.code-workspace
+#
+## Coverage reports
+#coverage/
+#*.lcov
+#
+## TypeScript compiled files
+#*.js
+#*.d.ts
+#*.map
